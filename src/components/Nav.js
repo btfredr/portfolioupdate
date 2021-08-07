@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
-const Nav = () => {
+const Nav = ({ toggle }) => {
   return (
     <>
       <nav className="nav">
@@ -11,7 +11,7 @@ const Nav = () => {
           </Link>
 
           <div className="mobileIcon">
-            <i className="fas fa-bars nav__icon" />
+            <i className="fas fa-bars nav__icon" onClick={toggle} />
           </div>
 
           <ul className="nav__menu">
