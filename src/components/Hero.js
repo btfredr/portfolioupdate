@@ -13,6 +13,12 @@ const Hero = () => {
           <h1 className="hero__h1">Fredrik Fordelsen</h1>
           <p className="hero__p">Frontend Developer</p>
         </div>
+
+        <HeroBtnWrapper>
+          <a href="#about" className="hero__button">
+            Get to know me
+          </a>
+        </HeroBtnWrapper>
       </div>
     </div>
   );
@@ -22,9 +28,16 @@ export default Hero;
 
 export const VideoBg = styled.video`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
   background-color: #232a34;
   opacity: 1;
+`;
+
+export const HeroBtnWrapper = styled.div`
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

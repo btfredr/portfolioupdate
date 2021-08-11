@@ -5,6 +5,10 @@
   font-family: "Encode Sans Expanded", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // variables
 $clr-main: black;
 $clr-secondary: white;
