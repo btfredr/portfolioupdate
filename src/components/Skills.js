@@ -1,100 +1,174 @@
 import styled from "styled-components";
+import Icon1 from "../assets/images/HTML5_logo.svg";
+import Icon2 from "../assets/images/CSS3.svg";
+import Icon3 from "../assets/images/javascript.svg";
+import Icon4 from "../assets/images/Sass.svg";
+import Icon5 from "../assets/images/React.svg";
+import Icon6 from "../assets/images/Nextjs.svg";
+import Icon7 from "../assets/images/tailwind.svg";
+import Icon8 from "../assets/images/styled.svg";
 
-import image from "../assets/images/soundcloud.jpg";
+const SkillsContainer = styled.div`
+  height: 1050px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #010606;
 
-const Skills = ({
-  lightBg,
-  id,
-  imgStart,
-  topLine,
-  lightText,
-  headline,
-  darkText,
-  description,
-  img,
-  alt,
-}) => {
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+  @media screen and (max-width: 480px) {
+    height: auto;
+`;
+
+const SkillsWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 16px;
+  padding: 0 50px;
+
+  @media screen and (max-width: 1030px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 20px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 630px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const SkillsCard = styled.div`
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  max-height: 340px;
+  max-width: 340px;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.2 ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+`;
+
+const SkillsIcon = styled.img`
+  height: 160px;
+  width: 160px;
+  margin-bottom: 10px;
+`;
+
+const SkillsH1 = styled.h1`
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 64px;
+  padding: 1em;
+
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
+`;
+
+const SkillsH2 = styled.h2`
+  font-size: 1rem;
+  margin-bottom: 10px;
+`;
+
+const SkillsP = styled.p`
+  font-size: 1rem;
+  text-align: center;
+`;
+
+const Skills = () => {
   return (
-    <div className="skills">
-      <SkillsContainer lightBg={lightBg} id={id}>
-        <div className="skills__wrapper">
-          <SkillsRow imgStart={imgStart}>
-            <div className="skills__column1">
-              <div className="skills__textWrapper">
-                <p className="skills__topLine">{topLine}</p>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
-              </div>
-            </div>
+    <>
+      <SkillsContainer id="services">
+        <SkillsH1>My Skills</SkillsH1>
+        <SkillsWrapper>
+          <SkillsCard>
+            <SkillsIcon src={Icon1} />
+            <SkillsH2>HTML</SkillsH2>
+            <SkillsP>
+              We help reduce your fees and increase your overall revenue.
+            </SkillsP>
+          </SkillsCard>
 
-            <div className="skills__column2">
-              <ImgWrap>
-                <Img src={image} alt={alt} />
-              </ImgWrap>
-            </div>
-          </SkillsRow>
-        </div>
+          <SkillsCard>
+            <SkillsIcon src={Icon2} />
+            <SkillsH2>CSS</SkillsH2>
+            <SkillsP>
+              You can access our platform online anywhere in the world.
+            </SkillsP>
+          </SkillsCard>
+
+          <SkillsCard>
+            <SkillsIcon src={Icon3} />
+            <SkillsH2>JavaScript</SkillsH2>
+            <SkillsP>
+              Unlock our special membership card that returns 5% cash back.
+            </SkillsP>
+          </SkillsCard>
+
+          <SkillsCard>
+            <SkillsIcon src={Icon4} />
+            <SkillsH2>Sass/SCSS</SkillsH2>
+            <SkillsP>
+              We help reduce your fees and increase your overall revenue.
+            </SkillsP>
+          </SkillsCard>
+
+          <SkillsCard>
+            <SkillsIcon src={Icon5} />
+            <SkillsH2>ReactJS</SkillsH2>
+            <SkillsP>
+              You can access our platform online anywhere in the world.
+            </SkillsP>
+          </SkillsCard>
+
+          <SkillsCard>
+            <SkillsIcon src={Icon6} />
+            <SkillsH2>Next.JS</SkillsH2>
+            <SkillsP>
+              Unlock our special membership card that returns 5% cash back.
+            </SkillsP>
+          </SkillsCard>
+
+          <SkillsCard>
+            <SkillsIcon src={Icon7} />
+            <SkillsH2>TailwindCSS</SkillsH2>
+            <SkillsP>
+              Unlock our special membership card that returns 5% cash back.
+            </SkillsP>
+          </SkillsCard>
+
+          <SkillsCard>
+            <SkillsIcon src={Icon8} />
+            <SkillsH2>Styled Components</SkillsH2>
+            <SkillsP>
+              Unlock our special membership card that returns 5% cash back.
+            </SkillsP>
+          </SkillsCard>
+        </SkillsWrapper>
       </SkillsContainer>
-    </div>
+    </>
   );
 };
 
 export default Skills;
-
-export const SkillsContainer = styled.div`
-  color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
-
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
-`;
-
-export const SkillsRow = styled.div`
-  display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
-  align-items: center;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2 col1'` : `'col1 col2'`};
-
-  @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
-  }
-`;
-
-export const Heading = styled.h1`
-  margin-bottom: 24px;
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
-
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
-  }
-`;
-
-export const Subtitle = styled.p`
-  max-width: 440px;
-  margin-bottom: 35px;
-  font-size: 18px;
-  line-height: 24px;
-  color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
-`;
-
-export const ImgWrap = styled.div`
-  max-width: 555px;
-  height: 100%;
-`;
-
-export const Img = styled.img`
-  width: 100%;
-  margin: 0 0 10px 0;
-  padding-right: 0;
-  border-radius: 50%;
-  height: auto;
-
-  @media screen and (max-width: 440px) {
-    margin-top: -350px;
-`;
