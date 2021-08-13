@@ -1,4 +1,4 @@
-import { homeObjOne } from "../components/Data";
+import { homeObjOne, homeObjThree, homeObjTwo } from "../components/Data";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -8,6 +8,8 @@ const Home = () => {
     <div className="home">
       <Hero />
       <About {...homeObjOne} />
+      <About {...homeObjTwo} />
+      <About {...homeObjThree} />
       <Skills />
     </div>
   );

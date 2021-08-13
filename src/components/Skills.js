@@ -9,18 +9,12 @@ import Icon7 from "../assets/images/tailwind.svg";
 import Icon8 from "../assets/images/styled.svg";
 
 const SkillsContainer = styled.div`
-  height: 1050px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #010606;
-
-  @media screen and (max-width: 768px) {
-    height: auto;
-  }
-  @media screen and (max-width: 480px) {
-    height: auto;
 `;
 
 const SkillsWrapper = styled.div`
@@ -35,7 +29,6 @@ const SkillsWrapper = styled.div`
   @media screen and (max-width: 1030px) {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 20px;
-    height: auto;
   }
 
   @media screen and (max-width: 768px) {
@@ -57,7 +50,6 @@ const SkillsCard = styled.div`
   align-items: center;
   border-radius: 10px;
   max-height: 340px;
-  max-width: 340px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2 ease-in-out;
@@ -99,71 +91,55 @@ const SkillsP = styled.p`
 const Skills = () => {
   return (
     <>
-      <SkillsContainer id="services">
+      <SkillsContainer id="skills">
         <SkillsH1>My Skills</SkillsH1>
         <SkillsWrapper>
           <SkillsCard>
             <SkillsIcon src={Icon1} />
             <SkillsH2>HTML</SkillsH2>
-            <SkillsP>
-              We help reduce your fees and increase your overall revenue.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon2} />
             <SkillsH2>CSS</SkillsH2>
-            <SkillsP>
-              You can access our platform online anywhere in the world.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon3} />
             <SkillsH2>JavaScript</SkillsH2>
-            <SkillsP>
-              Unlock our special membership card that returns 5% cash back.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon4} />
             <SkillsH2>Sass/SCSS</SkillsH2>
-            <SkillsP>
-              We help reduce your fees and increase your overall revenue.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon5} />
             <SkillsH2>ReactJS</SkillsH2>
-            <SkillsP>
-              You can access our platform online anywhere in the world.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon6} />
             <SkillsH2>Next.JS</SkillsH2>
-            <SkillsP>
-              Unlock our special membership card that returns 5% cash back.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon7} />
             <SkillsH2>TailwindCSS</SkillsH2>
-            <SkillsP>
-              Unlock our special membership card that returns 5% cash back.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon8} />
             <SkillsH2>Styled Components</SkillsH2>
-            <SkillsP>
-              Unlock our special membership card that returns 5% cash back.
-            </SkillsP>
+            <SkillsP>Description</SkillsP>
           </SkillsCard>
         </SkillsWrapper>
       </SkillsContainer>

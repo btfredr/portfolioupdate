@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-import image from "../assets/images/soundcloud.jpg";
+import { Button } from "./Button";
 
 const About = ({
   lightBg,
@@ -12,29 +11,45 @@ const About = ({
   darkText,
   description,
   img,
+  alt,
+  buttonLabel,
+  primary,
+  dark,
 }) => {
   return (
-    <div className="about">
-      <AboutContainer lightBg={lightBg} id={id}>
-        <div className="about__wrapper">
+    <>
+      <AboutContainer id={id} lightBg={lightBg}>
+        <AboutWrapper>
           <AboutRow imgStart={imgStart}>
-            <div className="about__column1">
-              <div className="about__textWrapper">
-                <p className="about__topLine">{topLine}</p>
+            <Column1>
+              <TextWrapper>
+                <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
-              </div>
-            </div>
-
-            <div className="about__column2">
+                <BtnWrap>
+                  <Button
+                    to="skills"
+                    primary={primary}
+                    dark={dark}
+                    sooth={true}
+                    duration={500}
+                    spy={true}
+                    offset={-80}
+                  >
+                    {buttonLabel}
+                  </Button>
+                </BtnWrap>
+              </TextWrapper>
+            </Column1>
+            <Column2>
               <ImgWrap>
-                <Img src={image} alt="Me" />
+                <Img src={img} alt={alt} />
               </ImgWrap>
-            </div>
+            </Column2>
           </AboutRow>
-        </div>
+        </AboutWrapper>
       </AboutContainer>
-    </div>
+    </>
   );
 };
 
@@ -49,6 +64,18 @@ export const AboutContainer = styled.div`
   }
 `;
 
+const AboutWrapper = styled.div`
+  display: grid;
+  z-index: 1;
+  height: 860px;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 24px;
+  justify-content: center;
+`;
+
 export const AboutRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
@@ -60,6 +87,39 @@ export const AboutRow = styled.div`
     grid-template-areas: ${({ imgStart }) =>
       imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
   }
+`;
+
+const Column1 = styled.div`
+  margin-bottom: 15px;
+  padding: 0 15px;
+  grid-area: col1;
+`;
+
+const Column2 = styled.div`
+  margin-bottom: 15px;
+  padding: 0 15px;
+  grid-area: col2;
+`;
+
+const TextWrapper = styled.div`
+  max-width: 540px;
+  padding-top: 0;
+  padding-bottom: 60px;
+`;
+
+const TopLine = styled.p`
+  color: #01bf71;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+`;
+
+const BtnWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
 `;
 
 export const Heading = styled.h1`
@@ -91,9 +151,5 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
-  border-radius: 50%;
   height: auto;
-
-  @media screen and (max-width: 440px) {
-    margin-top: -350px;
 `;
