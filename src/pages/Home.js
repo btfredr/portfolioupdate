@@ -2,6 +2,7 @@ import { homeObjOne, homeObjThree, homeObjTwo } from "../components/Data";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <About {...homeObjTwo} />
       <About {...homeObjThree} />
       <Skills />
+      <Footer />
     </div>
   );
 };

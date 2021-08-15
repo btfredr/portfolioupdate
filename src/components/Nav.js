@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import { FaBars } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { IconContext } from "react-icons/lib";
+import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = styled.nav`
-  background: #000;
+  background: ${({ scrollNav }) => (scrollNav ? "#000" : "transparent")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -81,32 +84,83 @@ const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #ff5a5f;
+    border-bottom: 3px solid #01bf71;
   }
 `;
 
 const Nav = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
-      <Navbar>
-        <NavbarContainer>
-          <NavLogo to="/">Fredrik Fordelsen</NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks to="about">About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="skills">Skills</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="contact">Contact</NavLinks>
-            </NavItem>
-          </NavMenu>
-        </NavbarContainer>
-      </Navbar>
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <Navbar scrollNav={scrollNav}>
+          <NavbarContainer>
+            <NavLogo to="/" onClick={toggleHome}>
+              Fredrik Fordelsen
+            </NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+            <NavMenu>
+              <NavItem>
+                <NavLinks
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  activeClass="active"
+                >
+                  About
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="skills"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  activeClass="active"
+                >
+                  Skills
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Contact
+                </NavLinks>
+              </NavItem>
+            </NavMenu>
+          </NavbarContainer>
+        </Navbar>
+      </IconContext.Provider>
     </>
   );
 };

@@ -5,11 +5,11 @@
   font-family: "Encode Sans Expanded", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 // variables
 $clr-main: black;
 $clr-secondary: white;
-$clr-accent: #ff5a5f;
+$clr-accent: #01bf71;
+
+.active {
+  border-bottom: 3px solid $clr-accent;
+}

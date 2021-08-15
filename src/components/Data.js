@@ -1,5 +1,6 @@
 import image1 from "../assets/images/soundcloud.jpg";
 import image2 from "../assets/images/React.svg";
+import image3 from "../assets/images/coding.png";
 
 export const homeObjOne = {
   id: "about",
@@ -48,9 +49,9 @@ export const homeObjThree = {
     "I recently finished my education as a Frontend Developer at Noroff in Bergen, Norway. I've worked a lot with React, Next, some design frameworks as well as some backend stuff.",
   buttonLabel: "Get Started",
   imgStart: false,
-  img: require("../assets/images/soundcloud.jpg"),
-  alt: "Me",
+  img: image3,
+  alt: "Coding",
   dark: false,
   darkText: true,
-  primary: true,
+  primary: false,
 };

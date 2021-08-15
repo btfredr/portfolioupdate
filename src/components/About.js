@@ -29,9 +29,9 @@ const About = ({
                 <BtnWrap>
                   <Button
                     to="skills"
-                    primary={primary}
-                    dark={dark}
                     sooth={true}
+                    primary={primary ? 1 : 0}
+                    dark={dark ? 1 : 0}
                     duration={500}
                     spy={true}
                     offset={-80}

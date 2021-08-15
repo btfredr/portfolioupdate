@@ -15,6 +15,7 @@ const SkillsContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #010606;
+  padding-bottom: 100px;
 `;
 
 const SkillsWrapper = styled.div`
