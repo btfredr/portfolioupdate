@@ -1,6 +1,5 @@
 import image1 from "../assets/images/soundcloud.jpg";
 import image2 from "../assets/images/React.svg";
-import image3 from "../assets/images/coding.png";
 
 export const homeObjOne = {
   id: "about",
@@ -33,24 +32,6 @@ export const homeObjTwo = {
   imgStart: true,
   img: image2,
   alt: "ReactJS logo",
-  dark: false,
-  darkText: true,
-  primary: false,
-};
-
-export const homeObjThree = {
-  id: "about",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: "What do I do?",
-  headline: "Frontend Development",
-  description:
-    "I recently finished my education as a Frontend Developer at Noroff in Bergen, Norway. I've worked a lot with React, Next, some design frameworks as well as some backend stuff.",
-  buttonLabel: "Get Started",
-  imgStart: false,
-  img: image3,
-  alt: "Coding",
   dark: false,
   darkText: true,
   primary: false,

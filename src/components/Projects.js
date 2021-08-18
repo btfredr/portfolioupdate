@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Icon1 from "../assets/images/HTML5_logo.svg";
-import Icon2 from "../assets/images/CSS3.svg";
-import Icon3 from "../assets/images/javascript.svg";
+import Icon1 from "../assets/images/Breaking_Bad_logo.svg";
+import Icon2 from "../assets/images/Hulu_logo.svg";
+import Icon3 from "../assets/images/LinkedIn_Logo.svg";
 import Icon4 from "../assets/images/Sass.svg";
 import Icon5 from "../assets/images/React.svg";
 import Icon6 from "../assets/images/Nextjs.svg";
@@ -14,7 +14,7 @@ const SkillsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: #010606;
   padding-bottom: 100px;
 `;
 
@@ -70,7 +70,7 @@ const SkillsIcon = styled.img`
 
 const SkillsH1 = styled.h1`
   font-size: 2.5rem;
-  color: #010606;
+  color: #fff;
   margin-bottom: 64px;
   padding: 1em;
 
@@ -89,11 +89,11 @@ const SkillsP = styled.p`
   text-align: center;
 `;
 
-const Skills = () => {
+const Projects = () => {
   return (
     <>
-      <SkillsContainer id="skills">
-        <SkillsH1>My Skills</SkillsH1>
+      <SkillsContainer id="projects">
+        <SkillsH1>Previous projects</SkillsH1>
         <SkillsWrapper>
           <SkillsCard>
             <SkillsIcon src={Icon1} />
@@ -148,4 +148,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Projects;

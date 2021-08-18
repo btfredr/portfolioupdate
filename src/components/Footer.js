@@ -71,8 +71,7 @@ const Footer = () => {
             <SocialMediaWrap>
               <SocialLogo to="/">Fredrik Fordelsen</SocialLogo>
               <WebsiteRights>
-                Fredrik Fordelsen &copy; {new Date().getFullYear()} All rights
-                reserved.
+                &copy; {new Date().getFullYear()} All Rights Reserved.
               </WebsiteRights>
 
               <SocialIcons>

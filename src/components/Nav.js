@@ -7,7 +7,7 @@ import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? "#000" : "transparent")};
+  background: ${({ scrollNav }) => (scrollNav ? "#010606" : "transparent")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -82,6 +82,7 @@ const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  font-weight: bold;
 
   &.active {
     border-bottom: 3px solid #01bf71;
@@ -127,9 +128,22 @@ const Nav = ({ toggle }) => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                  activeClass="active"
+                  activeClass="navbar--active"
                 >
                   About
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  activeClass="active"
+                >
+                  Projects
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -140,21 +154,8 @@ const Nav = ({ toggle }) => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                  activeClass="active"
                 >
                   Skills
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="contact"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Contact
                 </NavLinks>
               </NavItem>
             </NavMenu>
