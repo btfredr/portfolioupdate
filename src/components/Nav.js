@@ -16,7 +16,7 @@ const Navbar = styled.nav`
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 999;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;

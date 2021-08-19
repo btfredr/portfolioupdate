@@ -8,7 +8,7 @@ import Icon6 from "../assets/images/Nextjs.svg";
 import Icon7 from "../assets/images/tailwind.svg";
 import Icon8 from "../assets/images/styled.svg";
 
-const SkillsContainer = styled.div`
+const ProjectsContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -16,9 +16,13 @@ const SkillsContainer = styled.div`
   align-items: center;
   background-color: #010606;
   padding-bottom: 100px;
+
+  @media screen and (min-width: 1100px) {
+    display: none;
+  }
 `;
 
-const SkillsWrapper = styled.div`
+const ProjectsWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -43,7 +47,7 @@ const SkillsWrapper = styled.div`
   }
 `;
 
-const SkillsCard = styled.div`
+const ProjectsCard = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -62,13 +66,13 @@ const SkillsCard = styled.div`
   }
 `;
 
-const SkillsIcon = styled.img`
+const ProjectsIcon = styled.img`
   height: 160px;
   width: 160px;
   margin-bottom: 10px;
 `;
 
-const SkillsH1 = styled.h1`
+const ProjectsH1 = styled.h1`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
@@ -79,12 +83,12 @@ const SkillsH1 = styled.h1`
   }
 `;
 
-const SkillsH2 = styled.h2`
+const ProjectsH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
 `;
 
-const SkillsP = styled.p`
+const ProjectsP = styled.p`
   font-size: 1rem;
   text-align: center;
 `;
@@ -92,58 +96,58 @@ const SkillsP = styled.p`
 const Projects = () => {
   return (
     <>
-      <SkillsContainer id="projects">
-        <SkillsH1>Previous projects</SkillsH1>
-        <SkillsWrapper>
-          <SkillsCard>
-            <SkillsIcon src={Icon1} />
-            <SkillsH2>HTML</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
+      <ProjectsContainer>
+        <ProjectsH1>Previous projects</ProjectsH1>
+        <ProjectsWrapper>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon1} />
+            <ProjectsH2>HTML</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
 
-          <SkillsCard>
-            <SkillsIcon src={Icon2} />
-            <SkillsH2>CSS</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon2} />
+            <ProjectsH2>CSS</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
 
-          <SkillsCard>
-            <SkillsIcon src={Icon3} />
-            <SkillsH2>JavaScript</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon3} />
+            <ProjectsH2>JavaScript</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
 
-          <SkillsCard>
-            <SkillsIcon src={Icon4} />
-            <SkillsH2>Sass/SCSS</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon4} />
+            <ProjectsH2>Sass/SCSS</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
 
-          <SkillsCard>
-            <SkillsIcon src={Icon5} />
-            <SkillsH2>ReactJS</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon5} />
+            <ProjectsH2>ReactJS</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
 
-          <SkillsCard>
-            <SkillsIcon src={Icon6} />
-            <SkillsH2>Next.JS</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon6} />
+            <ProjectsH2>Next.JS</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
 
-          <SkillsCard>
-            <SkillsIcon src={Icon7} />
-            <SkillsH2>TailwindCSS</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon7} />
+            <ProjectsH2>TailwindCSS</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
 
-          <SkillsCard>
-            <SkillsIcon src={Icon8} />
-            <SkillsH2>Styled Components</SkillsH2>
-            <SkillsP>Description</SkillsP>
-          </SkillsCard>
-        </SkillsWrapper>
-      </SkillsContainer>
+          <ProjectsCard>
+            <ProjectsIcon src={Icon8} />
+            <ProjectsH2>Styled Components</ProjectsH2>
+            <ProjectsP>Description</ProjectsP>
+          </ProjectsCard>
+        </ProjectsWrapper>
+      </ProjectsContainer>
     </>
   );
 };

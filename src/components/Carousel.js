@@ -19,28 +19,42 @@ const Carousel = ({ slides }) => {
   }
 
   return (
-    <section className="carousel" id="projects">
-      <FaArrowAltCircleLeft
-        className="carousel__leftArrow"
-        onClick={prevSlide}
-      />
-      <FaArrowAltCircleRight
-        className="carousel__rightArrow"
-        onClick={nextSlide}
-      />
-      {SliderData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.image} alt="Random" className="carousel__image" />
-            )}
-          </div>
-        );
-      })}
-    </section>
+    <div className="container">
+      <h1 className="heading">Previous Projects</h1>
+      <section className="carousel" id="projects">
+        <FaArrowAltCircleLeft
+          className="carousel__leftArrow"
+          onClick={prevSlide}
+        />
+        <FaArrowAltCircleRight
+          className="carousel__rightArrow"
+          onClick={nextSlide}
+        />
+        {SliderData.map((slide, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              <div className="carousel__imgContainer">
+                {index === current && (
+                  <div>
+                    <a href={slide.link} target="_blank">
+                      <img
+                        src={slide.image}
+                        alt="Random"
+                        className="carousel__image"
+                      />
+                    </a>
+                    <h1 className="carousel__title">{slide.title}</h1>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </section>
+    </div>
   );
 };
 
