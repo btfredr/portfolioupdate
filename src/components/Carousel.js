@@ -39,7 +39,7 @@ const Carousel = ({ slides }) => {
               <div className="carousel__imgContainer">
                 {index === current && (
                   <div>
-                    <a href={slide.link} target="_blank">
+                    <a href={slide.link} target="_blank" rel="noreferrer">
                       <img
                         src={slide.image}
                         alt="Random"

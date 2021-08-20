@@ -84,11 +84,6 @@ const SkillsH2 = styled.h2`
   margin-bottom: 10px;
 `;
 
-const SkillsP = styled.p`
-  font-size: 1rem;
-  text-align: center;
-`;
-
 const Skills = () => {
   return (
     <>
@@ -98,49 +93,41 @@ const Skills = () => {
           <SkillsCard>
             <SkillsIcon src={Icon1} />
             <SkillsH2>HTML</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon2} />
             <SkillsH2>CSS</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon3} />
             <SkillsH2>JavaScript</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon4} />
             <SkillsH2>Sass/SCSS</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon5} />
             <SkillsH2>ReactJS</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon6} />
             <SkillsH2>Next.JS</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon7} />
             <SkillsH2>TailwindCSS</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
 
           <SkillsCard>
             <SkillsIcon src={Icon8} />
             <SkillsH2>Styled Components</SkillsH2>
-            <SkillsP>Description</SkillsP>
           </SkillsCard>
         </SkillsWrapper>
       </SkillsContainer>

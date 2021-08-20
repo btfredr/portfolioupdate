@@ -10,7 +10,7 @@ export const homeObjOne = {
   headline: "Frontend Development",
   description:
     "I recently finished my education as a Frontend Developer at Noroff in Bergen, Norway. I've worked a lot with React, Next, some design frameworks as well as some backend stuff.",
-  buttonLabel: "Get Started",
+  buttonLabel: "My Main Focus",
   imgStart: false,
   img: image1,
   alt: "Me",
@@ -20,15 +20,15 @@ export const homeObjOne = {
 };
 
 export const homeObjTwo = {
-  id: "about",
+  id: "focus",
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
   topLine: "My main focus",
   headline: "React",
   description:
-    "I recently finished my education as a Frontend Developer at Noroff in Bergen, Norway. I've worked a lot with React, Next, some design frameworks as well as some backend stuff.",
-  buttonLabel: "Get Started",
+    "I've been spending most of my time building apps in React, both to keep up with the times as well as because that's what I enjoy the most.",
+  buttonLabel: "Projects",
   imgStart: true,
   img: image2,
   alt: "ReactJS logo",

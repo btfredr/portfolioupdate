@@ -124,7 +124,7 @@ const Nav = ({ toggle }) => {
                 <NavLinks
                   to="about"
                   smooth={true}
-                  duration={500}
+                  duration={10}
                   spy={true}
                   exact="true"
                   offset={-80}
@@ -137,7 +137,7 @@ const Nav = ({ toggle }) => {
                 <NavLinks
                   to="projects"
                   smooth={true}
-                  duration={500}
+                  duration={10}
                   spy={true}
                   exact="true"
                   offset={-80}
@@ -150,7 +150,7 @@ const Nav = ({ toggle }) => {
                 <NavLinks
                   to="skills"
                   smooth={true}
-                  duration={500}
+                  duration={10}
                   spy={true}
                   exact="true"
                   offset={-80}

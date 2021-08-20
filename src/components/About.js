@@ -28,11 +28,11 @@ const About = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to="home"
+                    to="focus"
                     smooth={true}
                     primary={primary ? 1 : 0}
                     dark={dark ? 1 : 0}
-                    duration={500}
+                    duration={10}
                     spy={true}
                     offset={-80}
                   >

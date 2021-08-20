@@ -2,11 +2,6 @@ import styled from "styled-components";
 import Icon1 from "../assets/images/Breaking_Bad_logo.svg";
 import Icon2 from "../assets/images/Hulu_logo.svg";
 import Icon3 from "../assets/images/LinkedIn_Logo.svg";
-import Icon4 from "../assets/images/Sass.svg";
-import Icon5 from "../assets/images/React.svg";
-import Icon6 from "../assets/images/Nextjs.svg";
-import Icon7 from "../assets/images/tailwind.svg";
-import Icon8 from "../assets/images/styled.svg";
 
 const ProjectsContainer = styled.div`
   height: 100%;
@@ -47,7 +42,7 @@ const ProjectsWrapper = styled.div`
   }
 `;
 
-const ProjectsCard = styled.div`
+const ProjectsCard = styled.a`
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -58,6 +53,8 @@ const ProjectsCard = styled.div`
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2 ease-in-out;
+  text-decoration: none;
+  color: black;
 
   &:hover {
     transform: scale(1.02);
@@ -96,55 +93,37 @@ const ProjectsP = styled.p`
 const Projects = () => {
   return (
     <>
-      <ProjectsContainer>
+      <ProjectsContainer id="projectsMobile">
         <ProjectsH1>Previous projects</ProjectsH1>
         <ProjectsWrapper>
-          <ProjectsCard>
+          <ProjectsCard
+            href="https://www.breakingbad.fredrikfordelsen.no"
+            target="_blank"
+            rel="noreferrer"
+          >
             <ProjectsIcon src={Icon1} />
-            <ProjectsH2>HTML</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
+            <ProjectsH2>Breaking Bad Database</ProjectsH2>
+            <ProjectsP>Breaking Bad character database</ProjectsP>
           </ProjectsCard>
 
-          <ProjectsCard>
+          <ProjectsCard
+            href="https://hulu-clone-rust.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+          >
             <ProjectsIcon src={Icon2} />
-            <ProjectsH2>CSS</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
+            <ProjectsH2>Hulu Clone</ProjectsH2>
+            <ProjectsP>NextJS Hulu Clone with movie API</ProjectsP>
           </ProjectsCard>
 
-          <ProjectsCard>
+          <ProjectsCard
+            href="https://linkedin-84969.web.app"
+            target="_blank"
+            rel="noreferrer"
+          >
             <ProjectsIcon src={Icon3} />
-            <ProjectsH2>JavaScript</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
-          </ProjectsCard>
-
-          <ProjectsCard>
-            <ProjectsIcon src={Icon4} />
-            <ProjectsH2>Sass/SCSS</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
-          </ProjectsCard>
-
-          <ProjectsCard>
-            <ProjectsIcon src={Icon5} />
-            <ProjectsH2>ReactJS</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
-          </ProjectsCard>
-
-          <ProjectsCard>
-            <ProjectsIcon src={Icon6} />
-            <ProjectsH2>Next.JS</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
-          </ProjectsCard>
-
-          <ProjectsCard>
-            <ProjectsIcon src={Icon7} />
-            <ProjectsH2>TailwindCSS</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
-          </ProjectsCard>
-
-          <ProjectsCard>
-            <ProjectsIcon src={Icon8} />
-            <ProjectsH2>Styled Components</ProjectsH2>
-            <ProjectsP>Description</ProjectsP>
+            <ProjectsH2>LinkedIn Clone</ProjectsH2>
+            <ProjectsP>LinkedIn Clone with Redux and Firebase</ProjectsP>
           </ProjectsCard>
         </ProjectsWrapper>
       </ProjectsContainer>
